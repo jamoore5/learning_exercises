@@ -3,7 +3,7 @@ class ConsoleInterface
 
   QUESTION = "Would you like to continue? [yN]"
   
-  def initialize(input: nil, output: nil)
+  def initialize(input: $stdin, output: $stdout)
     @input = input
     @output = output
   end
