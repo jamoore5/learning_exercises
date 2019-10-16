@@ -18,6 +18,3 @@ class DiceRollingSimulator
     end
   end
 end
-
-simulator = DiceRollingSimulator.new
-simulator.run
