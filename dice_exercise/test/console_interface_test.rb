@@ -37,10 +37,9 @@ class ConsoleInterfaceTest < Minitest::Test
     end
 
     should 'return true if the user inputs Y\n' do
-      input = mock('stdin')
-      input.expects(:gets).returns("Y\n")
+      $stdin.expects(:gets).returns("Y\n")
 
-      console_interface = ConsoleInterface.new(input: input)
+      console_interface = ConsoleInterface.new
       assert console_interface.answer
     end
 
