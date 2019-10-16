@@ -1,7 +1,7 @@
 class DiceRollingSimulator
   attr :console_interface
 
-  def initialize(console_interface: nil)
+  def initialize(dice: Dice.new, console_interface: nil)
     @console_interface = console_interface
   end
 
