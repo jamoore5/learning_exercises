@@ -1,5 +1,5 @@
 class ConsoleInterface
-  attr_reader :output
+  attr :output
   
   def initialize(output: nil)
     @output = output
