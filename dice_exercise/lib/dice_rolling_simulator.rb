@@ -6,6 +6,10 @@ class DiceRollingSimulator
   end
 
   def run
-    console_interface.ask_question
+    continue = true
+    while continue do
+      console_interface.ask_question
+      continue = console_interface.answer
+    end
   end
 end
