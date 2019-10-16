@@ -15,6 +15,6 @@ class ConsoleInterface
   end
 
   def answer
-    self.input.gets == 'y'
+    self.input.gets.chomp.downcase == 'y'
   end
 end
