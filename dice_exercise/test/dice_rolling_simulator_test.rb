@@ -18,10 +18,9 @@ class DiceRollingSimulatorTest < Minitest::Test
     end
 
     should 'ask the user if they want to continue until they answer no' do
-      console_interface = ConsoleInterface.new
+      console_interface = mock_console_interface
       console_interface.expects(:ask_question).times(3)
       console_interface.stubs(:answer).returns(true).returns(true).then.returns(false)
-      console_interface.stubs(:print_result)
       
       simulator = DiceRollingSimulator.new(console_interface: console_interface)
       simulator.run
