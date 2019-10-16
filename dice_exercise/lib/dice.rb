@@ -1,5 +1,5 @@
 class Dice
-	def roll
-		0
-	end
+  def roll
+    0
+  end
 end

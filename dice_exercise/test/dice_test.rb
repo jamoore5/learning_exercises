@@ -4,11 +4,11 @@ require 'shoulda'
 require './lib/dice.rb'
 
 class DiceTest < Minitest::Test
-	context '#roll' do
-		should 'return an integer' do
-			dice = Dice.new
-			result = dice.roll
-			assert result.is_a?(Integer)
-		end
-	end
+  context '#roll' do
+    should 'return an integer' do
+      dice = Dice.new
+      result = dice.roll
+      assert result.is_a?(Integer)
+    end
+  end
 end
