@@ -1,5 +1,7 @@
 class ConsoleInterface
   attr :input, :output
+
+  QUESTION = "Would you like to continue? [yN]"
   
   def initialize(input: nil, output: nil)
     @input = input
@@ -11,7 +13,7 @@ class ConsoleInterface
   end
 
   def ask_question
-    self.output.puts "Would you like to continue? [yN]"
+    self.output.puts QUESTION
   end
 
   def answer

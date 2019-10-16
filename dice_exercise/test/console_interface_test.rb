@@ -20,8 +20,7 @@ class ConsoleInterfaceTest < Minitest::Test
   context '#ask_question' do
     should 'ask user if the to continue' do
       output = mock('stdout')
-      question = "Would you like to continue? [yN]"
-      output.expects(:puts).with(question)
+      output.expects(:puts).with(ConsoleInterface::QUESTION)
 
       console_interface = ConsoleInterface.new(output: output)
       console_interface.ask_question
