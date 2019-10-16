@@ -2,7 +2,7 @@ require_relative 'dice.rb'
 require_relative 'console_interface.rb'
 
 class DiceRollingSimulator
-  attr_reader :dice, :console_interface
+  attr :dice, :console_interface
 
   def initialize(dice: Dice.new, console_interface: ConsoleInterface.new)
     @dice = dice
