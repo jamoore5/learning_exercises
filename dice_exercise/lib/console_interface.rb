@@ -1,5 +1,5 @@
 class ConsoleInterface
-  attr :input, :output
+  attr_reader :input, :output
 
   QUESTION = "Would you like to continue? [yN]"
   
