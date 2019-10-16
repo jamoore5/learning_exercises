@@ -7,5 +7,5 @@ Here are the bash functions I am using
 ```
 function only_test_changes() { if [ "$(git status | grep -c lib)" -eq 0 ]; then echo 'only test changes'; else false; fi; }
 
-function tcr() { ruby test/* && (git add . && git commit -m "working code") || only_test_changes || git reset --hard; }
+function tcr() { rake test && (git add . && git commit -m "working code") || only_test_changes || git reset --hard; }
 ```
