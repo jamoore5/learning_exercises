@@ -1,7 +1,7 @@
 class DiceRollingSimulator
   attr_reader :dice, :console_interface
 
-  def initialize(dice: Dice.new, console_interface: nil)
+  def initialize(dice: Dice.new, console_interface: ConsoleInterface.new)
     @dice = dice
     @console_interface = console_interface
   end
