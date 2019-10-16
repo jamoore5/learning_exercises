@@ -18,3 +18,8 @@ class DiceRollingSimulator
     end
   end
 end
+
+if __FILE__ == $PROGRAM_NAME
+  simulator = DiceRollingSimulator.new
+  simulator.run
+end
