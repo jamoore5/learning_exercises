@@ -31,10 +31,10 @@ class ConsoleInterfaceTest < Minitest::Test
   context '#answer' do
     should 'return true if the user inputs y' do
       input = mock('stdin')
-      # input.expects(:gets).returns("y")
+      input.expects(:gets).returns("y")
 
       console_interface = ConsoleInterface.new(input: input)
-      # assert_equal true, console_interface.answer
+      assert_equal true, console_interface.answer
     end
   end
 
