@@ -28,4 +28,14 @@ class ConsoleInterfaceTest < Minitest::Test
     end
   end
 
+  context '#answer' do
+    should 'return true if the user inputs y' do
+      input = mock('stdin')
+      # input.expects(:gets).returns("y")
+
+      console_interface = ConsoleInterface.new(input: input)
+      # assert_equal true, console_interface.answer
+    end
+  end
+
 end

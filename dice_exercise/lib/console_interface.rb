@@ -1,7 +1,7 @@
 class ConsoleInterface
-  attr :output
+  attr :input, :output
   
-  def initialize(output: nil)
+  def initialize(input: nil, output: nil)
     @output = output
   end
 
