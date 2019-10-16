@@ -8,31 +8,28 @@ require './lib/console_interface.rb'
 class ConsoleInterfaceTest < Minitest::Test
   context '#print_result' do
     should 'call puts on the output with results' do
-      output = mock('stdout')
       result = "The result is 5"
-      output.expects(:puts).with(result)
+      $stdout.expects(:puts).with(result)
 
-      console_interface = ConsoleInterface.new(output: output)
+      console_interface = ConsoleInterface.new
       console_interface.print_result(result)
     end
   end
 
   context '#ask_question' do
     should 'ask user if the to continue' do
-      output = mock('stdout')
-      output.expects(:puts).with(ConsoleInterface::QUESTION)
+      $stdout.expects(:puts).with(ConsoleInterface::QUESTION)
 
-      console_interface = ConsoleInterface.new(output: output)
+      console_interface = ConsoleInterface.new
       console_interface.ask_question
     end
   end
 
   context '#answer' do
     should 'return true if the user inputs y' do
-      input = mock('stdin')
-      input.expects(:gets).returns("y")
+      $stdin.expects(:gets).returns("y")
 
-      console_interface = ConsoleInterface.new(input: input)
+      console_interface = ConsoleInterface.new
       assert console_interface.answer
     end
 
@@ -44,10 +41,9 @@ class ConsoleInterfaceTest < Minitest::Test
     end
 
     should 'return false if the user inputs N' do
-      input = mock('stdin')
-      input.expects(:gets).returns("n")
+      $stdin.expects(:gets).returns("n")
 
-      console_interface = ConsoleInterface.new(input: input)
+      console_interface = ConsoleInterface.new
       assert ! console_interface.answer
     end
   end
