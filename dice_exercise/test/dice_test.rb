@@ -8,7 +8,7 @@ class DiceTest < Minitest::Test
 		should 'return an integer' do
 			dice = Dice.new
 			result = dice.roll
-			# assert dice.is_a?(Integer)
+			assert result.is_a?(Integer)
 		end
 	end
 end
