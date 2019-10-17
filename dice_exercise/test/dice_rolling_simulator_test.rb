@@ -1,11 +1,5 @@
-require 'minitest/autorun'
-require 'shoulda'
-
-require 'mocha'
-require 'mocha/minitest'
-
-require './lib/dice_rolling_simulator.rb'
-
+require 'test_helper'
+require 'dice_rolling_simulator'
 
 class DiceRollingSimulatorTest < Minitest::Test
   context '#run' do

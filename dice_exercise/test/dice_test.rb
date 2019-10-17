@@ -1,7 +1,5 @@
-require 'minitest/autorun'
-require 'shoulda'
-
-require './lib/dice.rb'
+require 'test_helper'
+require 'dice'
 
 class DiceTest < Minitest::Test
   context '#roll' do

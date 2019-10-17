@@ -1,9 +1,5 @@
-require 'minitest/autorun'
-require 'shoulda'
-require 'mocha'
-require 'mocha/minitest'
-
-require './lib/console_interface.rb'
+require 'test_helper'
+require 'console_interface'
 
 class ConsoleInterfaceTest < Minitest::Test
   context '#print_result' do
